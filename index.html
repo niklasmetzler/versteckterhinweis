@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Geschützte Seite</title>
+
+<style>
+    body {
+        background: #111;
+        color: #eee;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 120px;
+    }
+    input {
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        width: 220px;
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background: #4CAF50;
+        color: white;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    button:hover {
+        background: #45a049;
+    }
+</style>
+
+<script>
+function checkPW() {
+    const pw = document.getElementById("pw").value.trim();
+    if (pw === "22.06.2023") {  // Dein Passwort
+        window.location = "loesung.html"; 
+    } else {
+        alert("Falsches Passwort!");
+    }
+}
+</script>
+
+</head>
+<body>
+
+<h2>Gib den Tag ein, an dem alles begann.</h2>
+
+<input id="pw" type="text" placeholder="TT.MM.JJJJ">
+<button onclick="checkPW()">OK</button>
+
+</body>
+</html>
